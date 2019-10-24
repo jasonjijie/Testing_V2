@@ -1,0 +1,87 @@
+##########################
+# bind()                 #  
+# Merge                  #
+# substr()               #
+# paste()                #              
+# substring()            #
+#                        #
+##########################
+
+
+## 1. rind()
+df1 = data.frame(CustomerId = c(1:6), Product = c(rep("Oven", 3), rep("Television", 3)))
+df2 = data.frame(CustomerId = c(4:7), Product = c(rep("Television", 2), rep("Air conditioner", 2)))
+
+rbind_df <- rbind(df1,df2)
+
+
+
+
+
+
+## 2. cbind()
+df1 = data.frame(name = c("Rahul","joe","Adam","Brendon"), married_year = c(2016,2015,2016,2008))
+df2 = data.frame(Birth_place = c("Delhi","Seattle","London","Moscow"), Birth_year = c(1988,1990,1989,1984))
+
+cbind_df <- cbind(df1,df2)
+
+
+
+
+
+## 3. merge()
+total <- merge(df1, df2, by="CustomerId")
+totaL <- merge(df1,df2,by=c("product","CustomerId"))
+
+
+
+
+
+## 4. bind_rows & bind_cols():
+
+#bind_rows require that two data frame should have same rows
+
+#bind_cols require that two data frame should have same columns
+mydf1 <- data.frame(x=c(1,2,3,4), y = c(10,20,30,40))
+mydf2 <- data.frame(x=c(5,6), y=c(50,60))
+mydf3 <- data.frame(z=c(100,200,300,400))
+
+bind_rows(mydf1,mydf2)
+bind_cols(mydf1,mydf2)
+
+
+
+
+
+
+## 5. sunstr():
+a <- substr('JAN07',1,4)
+b <- substr(c('JAN07', 'MAR06'), 1, 3)
+
+
+
+
+
+## From 'start' position to end strings;
+substring(c('JAN07', 'MAR06'),4)
+
+
+
+
+
+## 6. How to use the paste function in R.
+
+#Example:
+paste(c("ab","cd"), c("ef","gh"),collapse =" ")
+
+paste("x", 1:3, sep='')
+
+
+paste(c("a","b","c"), collapse = " ")
+
+
+
+##Uppercas and lowercase writing
+toupper(c("aBd"))
+
+tolower(c('aB', 'CD'))
