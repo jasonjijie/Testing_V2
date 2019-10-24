@@ -5,6 +5,7 @@ library(readxl)
 type <- as.character(read_excel(datafile, sheet = "Outcomes", col_names = FALSE,skip=1,n_max=1))
 df <- read_excel(datafile, sheet = "", col_types =type, col_names = FALSE, skip = n)
 
+df2 <-read.csv("datafile.csv")
 
 
 ## 2. xlsx packages()
