@@ -34,8 +34,14 @@ final_data <- data[!row.has.na]
 
 ## 3. Recoding some value equal to missing value: 99--->NA
 leadership$age[leadership$age==99] <- NA
+table(leadership$age)
 
 
+
+
+## 3.1:  
+leadship$age[leadship$nations %in% China]
+table(leadership$age) ##done
 
 
 
