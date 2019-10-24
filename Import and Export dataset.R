@@ -1,5 +1,3 @@
-
-
 ## 1. read_excel(): skip n rows
 #you have download the csv into your desktop
 install.packages("readxl")
@@ -26,3 +24,7 @@ df1 <- xlsx::read.xlsx("NOVxxx.xlsx", sheetName = tab, header = TRUE)
 xlsx::write.xlsx(dataset, "name.xlsx", sheetName = "name")
 xlsx::write.xlsx(dataset, "name,xlsx", sheetName = "name2", append = TRUE)
 
+
+
+## 3. ggasave function
+ggsave(paste0(outdir,"Only_placebo_arm.png"),p1,width = 20, height = 20, units = "cm")
