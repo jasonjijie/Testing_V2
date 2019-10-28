@@ -19,15 +19,24 @@ menu <- read_csv("http://joeystanley.com/data/menu.csv")
 ## 1. Select(): 
 menu %>% select(Calories,Sugars)
 
+
+
+
+
+
+
+
 #Select everything except the "Item":
 menu %>% select(-Item)
 
-#Move two items:
+
 menu %>% select(-c(Category,Item))
 menu %>% select(-Category,-Item)
 
+
 #keep column:
 menu %>% select(Oz:Sugars)
+
 
 #Re-roder column:
 menu %>% select(Oz, Sugars, Fat, Calories)
