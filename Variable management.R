@@ -46,6 +46,8 @@ mydata1 <- transform(mydata, sum=x1+x2, mean=(x1+x2)/2)
 leadership$age[leadership$age ==99] <- NA
 leadership$agecat[leadership$age>75] <- "Elder"
 
+##method2:
+full[full$Pclass == '3' & full$Embarked == 'S', ]
 
 
 
