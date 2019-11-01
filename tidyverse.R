@@ -61,6 +61,12 @@ menu %>% mutate(Sugars = round(Sugars,2))
 #If you want to factory a variable
 menu %>% mutate(Category = as.factor(Category))
 
+##Another choice for no pipeline
+vet <- mutate(veteran, AG = ifelse((age < 60), "LT60", "OV60"),
+              AG = factor(AG),
+              trt = factor(trt,labels=c("standard","test")),
+              prior = factor(prior,labels=c("N0","Yes")))
+
 
 
 
