@@ -10,7 +10,10 @@
 
 
 ## 1. rind()
-## Make sure have the same number of column, otherwise it will not work!!!
+#bind_rows() is more functional in the sense that it will combine data frames with different numbers of columns (assigning NA to rows with those columns missing), 
+#if you are combining data frames with the same columns, I would recommend rbind()
+
+
 df1 = data.frame(CustomerId = c(1:6), Product = c(rep("Oven", 3), rep("Television", 3)))
 df2 = data.frame(CustomerId = c(4:7), Product = c(rep("Television", 2), rep("Air conditioner", 2)))
 
