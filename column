@@ -1,3 +1,4 @@
+
 ##########################
 # bind()                 #  
 # Merge                  #
@@ -9,6 +10,7 @@
 
 
 ## 1. rind()
+## Make sure have the same number of column.
 df1 = data.frame(CustomerId = c(1:6), Product = c(rep("Oven", 3), rep("Television", 3)))
 df2 = data.frame(CustomerId = c(4:7), Product = c(rep("Television", 2), rep("Air conditioner", 2)))
 
@@ -20,6 +22,8 @@ rbind_df <- rbind(df1,df2)
 
 
 ## 2. cbind()
+##make sure have the same number of rows
+
 df1 = data.frame(name = c("Rahul","joe","Adam","Brendon"), married_year = c(2016,2015,2016,2008))
 df2 = data.frame(Birth_place = c("Delhi","Seattle","London","Moscow"), Birth_year = c(1988,1990,1989,1984))
 
