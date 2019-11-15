@@ -12,6 +12,9 @@ df2 <-read.csv("datafile.csv")
 install.packages('xlsx')
 library(xlsx)
 
+
+## Header='TRUE' which mean: we use excel first line as column name, and we read data from the second line''
+##Header='FALSE' the first line that we read as the data
 df1 <- xlsx::read.xlsx("NOVxxx.xlsx", sheetName = tab, header = TRUE)
 
 
