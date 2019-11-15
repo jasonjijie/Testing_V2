@@ -2,9 +2,15 @@
 #you have download the csv into your desktop
 install.packages("readxl")
 library(readxl)
+
+
+# col_names=FLASE, means that we don't read the first row as column name.
 type <- as.character(read_excel(datafile, sheet = "Outcomes", col_names = FALSE,skip=1,n_max=1))
 df <- read_excel(datafile, sheet = "", col_types =type, col_names = FALSE, skip = n)
 
+
+
+## read csv file
 df2 <-read.csv("datafile.csv")
 
 
