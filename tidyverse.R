@@ -21,11 +21,6 @@ menu %>% select(Calories,Sugars)
 
 
 
-
-
-
-
-
 #Select everything except the "Item":
 menu %>% select(-Item)
 
