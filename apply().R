@@ -67,5 +67,3 @@ medical_example <- data.frame(patietID=1:100, age=rnorm(100, mean=60, sd=12),
                               treatment=gl(2,50), labels=c("Treatment","Control"))
 
 tapply(medical_example$age, medical_example$treatment,mean)
-
-
