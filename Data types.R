@@ -100,9 +100,3 @@ rm(object1, object2,..)
 dim(object)
 class(object)
 length(object)
-
-
-
-
-
-
