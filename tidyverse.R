@@ -142,7 +142,10 @@ vowels_tall <- read_csv("http://joeystanley.com/data/vowels_tall.csv") %>%
   
   print()
 
+
 ## 1. gather() function: ('wide' to 'tall')
+
+##I'll just specify that I don't want the word column used
 vowels_wide %>% gather(key="time",value="HZ",-word)
 
 
