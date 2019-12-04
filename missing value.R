@@ -54,8 +54,6 @@ z <- sum(x)
 
 
 
-
-
 ##We can remove the missing value
 x <- c(1,2,NA,3)
 y <- sum(x,na.rm =TRUE)
