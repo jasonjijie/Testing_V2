@@ -1,38 +1,40 @@
-## 1. read_excel(): skip n rows
-#you have download the csv into your desktop
+##########################
+# Import the data        #  
+#                        #
+#                        #
+#                        #              
+#                        #                        
+##########################
+#read_excel()
+
 install.packages("readxl")
 library(readxl)
 
+#col_names=FALSE:we don't read tje first row as the conlumn name
+df <- read_excel(datafile, sheet="", col_types = type, col_name=FALSE, skip = n)
 
-# col_names=FLASE, means that we don't read the first row as column name.
-type <- as.character(read_excel(datafile, sheet = "Outcomes", col_names = FALSE,skip=1,n_max=1))
-df <- read_excel(datafile, sheet = "", col_types =type, col_names = FALSE, skip = n)
-
-
-
-## read csv file
-df2 <-read.csv("datafile.csv")
+#read_csv file: make sure download the csv file into desktop first
+df2 <- read.csv("....csv")
 
 
-## 2. xlsx packages()
-install.packages('xlsx')
+#header = true: read first row.
+install.packages("xlsx")
 library(xlsx)
+df3 <- xlsx::read.xlsx(".xlsx", sheetName = tab, header = TRUE)
 
 
-## Header='TRUE' which mean: we use excel first line as column name, and we read data from the second line''
-##Header='FALSE' the first line that we read as the data
-df1 <- xlsx::read.xlsx("NOVxxx.xlsx", sheetName = tab, header = TRUE)
 
+##########################
+# EXport the data        #  
+#                        #
+#                        #
+#                        #              
+#                        #                        
+##########################
+#Use appended to make two sub tab in same xlsx file
+xlsx::write.xlsx(dataset, sheetName = "name1")
+xlsx::write.xlsx(dataset, sheetName = "name1", append = TRUE)
 
-#############################
-#     Export the dataset    #
-#                           #
-#                           #                            
-#                           #
-#############################
-
-xlsx::write.xlsx(dataset, "name.xlsx", sheetName = "name")
-xlsx::write.xlsx(dataset, "name,xlsx", sheetName = "name2", append = TRUE)
 
 
 
