@@ -1,8 +1,6 @@
 
 library(tidyverse)
 
-
-
 # for loop
 for (i in 1:10){
   print("hello world")
