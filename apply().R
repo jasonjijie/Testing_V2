@@ -31,6 +31,13 @@ myfunction <- function(x){
 }
 
 matrix1_apply21 <- apply(matrix1, 1, function(x) myfunction(x))
+
+#or you can write the function within apply directly
+matrix1_apply21 <- apply(matrix1, 1, function(x){
+  result <- 1+2+sqrt(x)
+  return(result)})
+                         
+                         
 matrix1_apply31 <- apply(matrix1, 2, function(x) myfunction(x))
 
 # 2)
