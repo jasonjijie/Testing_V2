@@ -38,8 +38,8 @@ leadership$agecat[leadership$country == 'US' || leadership$age == 'NA'] <- "Elde
 
 
 #sort data:
-#leadership <- leadership[order(q3,gender),]
-leadership <- leadership[order(gender,-age),]
+#sort by mpg (ascending) and cyl (descending)
+newdata <- mtcars[order(mpg, -cyl),]
 
 
 #select column:
