@@ -37,13 +37,16 @@ leadership$agecat[leadership$country == 'US' || leadership$age == 'NA'] <- "Elde
 
 
 
+
 #sort data:
 #sort by mpg (ascending) and cyl (descending)
 newdata <- mtcars[order(mpg, -cyl),]
 
 
+
 #select column:
 newdata <- leadership[, 4:10]
+
 
 
 #which(): functions
@@ -53,31 +56,18 @@ newdata <- leadership[which(leadership$gender=="M" & leadership$age>30),]
 
 
 
-
-
-
-
-
-
-
-
-
-## 5.0 Culling(discard) some variable:
-myvar <- names(leadership) %in% c("q3","q4")
+# Discard some variable
+myvar <- names(leadership) %in% c("q3", "q4")
 newdata <- leadership[!myvar]
 
 
 
 
+#Discard some variable
+newdata <- leadership[c(-8,-9)]
 
-## 5.1 
-newdata <- leadership[c(-8,-9)] #The results was same
-
-
-## 5.2 
-newdata <- subset(leadership, gender=="M" & age>25,
-                                select = (gender:q4))
-
+newdata <- subset(leadership, gender=="M" & age > 25, 
+                  select=(gender:q4))
 
 
 
