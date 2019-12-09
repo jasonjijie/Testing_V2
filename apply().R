@@ -11,6 +11,13 @@ m1 <- matrix(c(1:10), nrow=5, ncol=6)
 a_m1 <- apply(m1, 2,sum)
 
 
+
+# Apart from few more differences, 
+# Main reasons for using "bind_rows" over rbind is to combine two data frames having different number of columns. 
+# "rbind" throws an error in such a case whereas bind_rows assigns "NA" to those rows of columns missing in one of the data frames where the value is not provided by the data frames
+
+
+
 l1 <- c(4,9,6)
 l2 <- c(25,36,49)
 matrix1 <- cbind(l1,l2)
