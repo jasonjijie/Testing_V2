@@ -17,7 +17,7 @@ matrix1 <- cbind(l1,l2)
 
 matrix1_apply1 <- apply(matrix1, 1, sum)
 
-# a little vit diff, apply() take 1st column in matrix, then return 1st row, then take second column in matrix return second row
+# a little bit diff, apply() take 1st column in matrix, then return 1st row, then take second column in matrix return second row
 matrix1_apply2 <- apply(matrix1, 1, sqrt)
 
 #take 1st column, return first column, then take second column, return second column
