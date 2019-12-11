@@ -20,7 +20,11 @@ df2 <- read.csv("....csv")
 #header = true: read first row.
 install.packages("xlsx")
 library(xlsx)
-df3 <- xlsx::read.xlsx(".xlsx", sheetName = tab, header = TRUE)
+#1)
+read_xlsx("C:/Users/JIJIE.XU/Desktop/moeholt1996.xlsx", sheet="Sheet1")
+
+#2)
+xlsx::read.xlsx(".xlsx", sheetName = tab, header = TRUE)
 
 
 
