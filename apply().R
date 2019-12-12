@@ -63,7 +63,7 @@ result <- sqrt(x)+y
   }
   
 # this tell you matrix value which corresponsing to y value, not x anymore  
-matrix1_apply221 <- apply(matrix1, 1, function(x) myfunction2(3,y))
+matrix1_apply221 <- apply(matrix1, 1, function(y) myfunction2(3,y))
   
 #Conclusion: apply() use function within the target of matrix
 
