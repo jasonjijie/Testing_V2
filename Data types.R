@@ -5,7 +5,8 @@
 # factor()               #
 # matrix()               #
 # array()                #              
-# lists()                #                        
+# lists()                #
+# string()               #       
 ##########################
 
 #1) numeric:
