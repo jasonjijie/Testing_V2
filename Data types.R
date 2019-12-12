@@ -67,3 +67,50 @@ diabetes <- factor(diabetes)
 patientdata <- data.frame(patientID, age, diabetes, status)
 names(patientdata)[2] <- "Age at hospitilization (in) years"
 patientdata[2]
+
+
+
+library(stringr)
+
+## Usage
+x <- c("why", "video", "cross", "extra", "deal", "authority")
+
+
+
+
+## Str_subset()
+# See the length of character
+str_length(x)
+
+
+# joint multiple strings into a single string
+str_c(x, collapse = " , ")
+
+
+# Extract the element from the begining to the end
+str_sub(x, 1, 2)
+
+# Match any single character that is a vowel
+str_subset(x, "[aeiou]")
+
+# Count the number of patterns
+str_count(x, "[aeiou]")
+
+# Tell you if there's any match to the pattern.
+str_detect(x, "[aeiou]")
+
+# Extract the matching components
+str_subset(x, "[jjjo]")
+
+# Extracts the text of the match
+str_extract(x, "[aeiou]")
+
+# Tells you if there's nay match to the pattern
+str_detect(x, "[aeiou]")
+
+# Replace the matchs with new text
+str_replace(x, "[aeiou]", "?")
+
+# Splits up a string into multiple pieces
+
+str_split(c("a,b", "c,d,e"), ",")
